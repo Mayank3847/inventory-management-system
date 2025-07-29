@@ -1,0 +1,22 @@
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.item-actions button {
+  margin-left: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+}
+
+.item-actions button:hover {
+  background-color: #e0e0e0;
+}

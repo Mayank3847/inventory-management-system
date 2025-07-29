@@ -7,9 +7,11 @@ const {
   deleteItem,
 } = require("../controllers/itemController");
 
-router.get("/", getItems);           // GET all items
-router.post("/", createItem);        // POST create item
-router.put("/:id", updateItem);      // PUT update item
-router.delete("/:id", deleteItem);   // DELETE item
+const auth = require("../middleware/authMiddleware");
+
+router.get("/", auth, getItems);
+router.post("/", auth, createItem);
+router.put("/:id", auth, updateItem);
+router.delete("/:id", auth, deleteItem);
 
 module.exports = router;

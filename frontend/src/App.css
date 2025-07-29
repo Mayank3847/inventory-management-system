@@ -1,0 +1,25 @@
+.App {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.item-form {
+  margin-bottom: 20px;
+}
+
+.item-form div {
+  margin-bottom: 10px;
+}
+
+.item-form label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.item-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
