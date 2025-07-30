@@ -11,18 +11,19 @@ router.post("/register", async (req, res) => {
 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({
+    const newUser = new User({
       username,
       password: hashedPassword,
-      role: role || "user",
+      role: role || "user", // default to user
     });
 
-    await user.save();
-    res.status(201).json({ message: "User registered successfully!" });
+    await newUser.save();
+    res.status(201).json({ message: "User created" });
   } catch (err) {
-    res.status(500).json({ error: "Registration failed. Username may exist." });
+    res.status(400).json({ error: "Registration failed" });
   }
 });
+
 
 // Login
 router.post("/login", async (req, res) => {
